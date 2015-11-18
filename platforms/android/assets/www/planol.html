@@ -1,0 +1,20 @@
+<ion-view>
+
+  <ion-content class="padding" style="background-color:black">
+
+    <figure id="projectsvg" style="background-color:green">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  style="background-color:white" viewBox="0 0 772 1393">
+        //set your background image
+        <image width="772" height="1393" xlink:href="img/planosimplificat.jpg"></image>
+        <g class="hover_group">
+          <a ng-ref="home">
+            <rect ng-repeat="i in seats4" id="rect{{i}}" x="{{7 + (84 * i)}}" y="252" ng-click="anar('home')"></rect>
+            <rect ng-repeat="i in seats4" id="rect{{i}}" x="{{7 + (84 * i)}}" y="354" ng-click="anar('home')"></rect>
+          </a>
+        </g>
+      </svg>
+    </figure>
+
+  </ion-content>
+
+</ion-view>

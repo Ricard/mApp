@@ -1,0 +1,35 @@
+/* Empty. Add your own CSS if you like */
+.center {
+  text-align: center;
+}
+
+/*#projectsvg
+{
+  position: relative;
+  width: 100%;
+  padding-bottom: 77%;
+  vertical-align: middle;
+  margin: 0;
+  overflow: hidden;
+}
+#projectsvg svg
+{
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+#rect2
+{
+  fill:#AAAAAA
+}*/
+#projectsvg rect
+{
+  /*fill:#333333*/
+  fill-opacity:0.5;
+  stroke-width:1;
+  stroke:rgb(3,3,3);
+  stroke-opacity:1;
+  height:100;
+  width:83;
+}
