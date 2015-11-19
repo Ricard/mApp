@@ -25,4 +25,14 @@ angular.module('starter.controllers', [])
   $scope.settings = {
     enableFriends: true
   };
+})
+
+.controller('PlanolCtrl', function($scope, $state, $window) {
+  // $scope.dev_width = $window.innerWidth;
+  // $scope.dev_height = $window.innerHeight;
+  $scope.seats4 = [0,1,2,3];
+
+  $scope.anar = function (where) {
+    $state.go(where);
+  };
 });

@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('mApp', ['ionic', 'starter.controllers', 'starter.services'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -35,18 +35,20 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     .state('tab', {
     url: '/tab',
     abstract: true,
-    // templateUrl: 'templates/tabs.html'
-    templateUrl: 'templates/blank2.html'
+    templateUrl: 'templates/tabs.html'
+    // templateUrl: 'templates/blank2.html'
   })
 
   // Each tab has its own nav history stack:
 
-  .state('tab.dash', {
-    url: '/dash',
+  .state('tab.planol', {
+    url: '/planol',
     views: {
-      'tab-dash': {
-        templateUrl: 'templates/tab-dash.html',
-        controller: 'DashCtrl'
+      'tab-planol': {
+        // templateUrl: 'templates/tab-dash.html',
+        templateUrl: 'templates/planol.html',
+        // controller: 'DashCtrl'
+        controller: 'PlanolCtrl'
       }
     }
   })
@@ -81,6 +83,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
   });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/dash');
+  $urlRouterProvider.otherwise('/tab/planol');
 
 });
