@@ -3,28 +3,23 @@
   text-align: center;
 }
 
-/* SVG position */
-.hover_group:hover
+/*#projectsvg
 {
-    opacity:1;
-}
-#projectsvg
-{
-  /*position: relative;
+  position: relative;
   width: 100%;
   padding-bottom: 77%;
   vertical-align: middle;
   margin: 0;
-  overflow: hidden;*/
+  overflow: hidden;
 }
 #projectsvg svg
 {
-  /*display: inline-block;
+  display: inline-block;
   position: absolute;
   top: 0;
-  left: 0;*/
+  left: 0;
 }
-/*#rect2
+#rect2
 {
   fill:#AAAAAA
 }*/
@@ -37,4 +32,19 @@
   stroke-opacity:1;
   height:100;
   width:83;
+}
+
+video#bgvid {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background: url(polina.jpg) no-repeat;
+    background-size: cover;
 }
