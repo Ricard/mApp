@@ -23,18 +23,19 @@
 {
   fill:#AAAAAA
 }*/
-#projectsvg rect
+
+#map-figure rect
 {
   /*fill:#333333*/
   fill-opacity:0.5;
   stroke-width:1;
   stroke:rgb(3,3,3);
   stroke-opacity:1;
-  height:100;
-  width:83;
+  height: 100px;
+  width: 83px;
 }
 
-video#bgvid {
+/*video#bgvid {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -47,4 +48,4 @@ video#bgvid {
     transform: translateX(-50%) translateY(-50%);
     background: url(polina.jpg) no-repeat;
     background-size: cover;
-}
+}*/

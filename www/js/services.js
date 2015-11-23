@@ -6,30 +6,75 @@ angular.module('starter.services', [])
   // Some fake testing data
   var chats = [{
     id: 0,
-    name: 'Ben Sparrow',
-    lastText: 'You on your way?',
-    face: 'img/ben.png'
-  }, {
-    id: 1,
-    name: 'Max Lynx',
-    lastText: 'Hey, it\'s me',
-    face: 'img/max.png'
-  }, {
-    id: 2,
-    name: 'Adam Bradleyson',
-    lastText: 'I should buy a boat',
-    face: 'img/adam.jpg'
-  }, {
-    id: 3,
-    name: 'Perry Governor',
-    lastText: 'Look at my mukluks!',
-    face: 'img/perry.png'
-  }, {
-    id: 4,
-    name: 'Mike Harrington',
-    lastText: 'This is wicked good ice cream.',
-    face: 'img/mike.png'
-  }];
+    name: 'Ricard',
+    lastText: 'Castelló Rocamora',
+  },{
+    id: 0,
+    name: 'Nom',
+    lastText: 'Cognom Cognom',
+  },{
+    id: 0,
+    name: 'Nom3 Cognom3 Cognom3',
+    lastText: 'bla bla bla3',
+  },{
+    id: 0,
+    name: 'Nom4 Cognom4 Cognom4',
+    lastText: 'bla bla bla4',
+  },{
+    id: 0,
+    name: 'Nom5 Cognom5 Cognom5',
+    lastText: 'bla bla bla5',
+  },{
+    id: 0,
+    name: 'Nom6 Cognom6 Cognom6',
+    lastText: 'bla bla bla6',
+  },{
+    id: 0,
+    name: 'Ricard',
+    lastText: 'Castelló Rocamora',
+  },{
+    id: 0,
+    name: 'Nom',
+    lastText: 'Cognom Cognom',
+  },{
+    id: 0,
+    name: 'Nom3 Cognom3 Cognom3',
+    lastText: 'bla bla bla3',
+  },{
+    id: 0,
+    name: 'Nom4 Cognom4 Cognom4',
+    lastText: 'bla bla bla4',
+  },{
+    id: 0,
+    name: 'Nom5 Cognom5 Cognom5',
+    lastText: 'bla bla bla5',
+  },{
+    id: 0,
+    name: 'Nom6 Cognom6 Cognom6',
+    lastText: 'bla bla bla6',
+  }
+  // , {
+  //   id: 1,
+  //   name: 'Max Lynx',
+  //   lastText: 'Hey, it\'s me',
+  //   face: 'img/max.png'
+  // }, {
+  //   id: 2,
+  //   name: 'Adam Bradleyson',
+  //   lastText: 'I should buy a boat',
+  //   face: 'img/adam.jpg'
+  // }, {
+  //   id: 3,
+  //   name: 'Perry Governor',
+  //   lastText: 'Look at my mukluks!',
+  //   face: 'img/perry.png'
+  // }, {
+  //   id: 4,
+  //   name: 'Mike Harrington',
+  //   lastText: 'This is wicked good ice cream.',
+  //   face: 'img/mike.png'
+  // }
+];
 
   return {
     all: function() {

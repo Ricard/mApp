@@ -1,0 +1,12 @@
+<ion-view>
+
+  <ion-content class="padding">
+    <!-- <video autoplay loop id="bgvid">
+      <source src="img\video.mp4" type="video/mp4">
+    </video> -->
+    <div class="col-50 col-offset-25">
+        <button class="button button-block button-positive" ng-click="anar('planol')">Veure plànol</button>
+    </div>
+  </ion-content>
+
+</ion-view>
