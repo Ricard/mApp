@@ -1,11 +1,4 @@
-// Ionic Starter App
-
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-// 'starter.services' is found in services.js
-// 'starter.controllers' is found in controllers.js
-angular.module('mApp', ['ionic', 'backand', 'starter.controllers'])
+angular.module('mApp', ['ionic', 'backand', 'mAppControllers'])
 
 .run(function($ionicPlatform) {
   // $ionicPlatform.ready(function() {
@@ -25,6 +18,7 @@ angular.module('mApp', ['ionic', 'backand', 'starter.controllers'])
 
 .config(function($stateProvider, $urlRouterProvider, BackandProvider) {
 
+  // Backand authentification
   BackandProvider.setAppName('mapp');
   BackandProvider.setSignUpToken('90bd3bc8-d123-4d06-9c57-38e0f24414f0');
   BackandProvider.setAnonymousToken('20bbd01c-0dff-43db-bcf1-a0d7e88f3692');
@@ -53,24 +47,24 @@ angular.module('mApp', ['ionic', 'backand', 'starter.controllers'])
     }
   })
 
-  .state('tab.chats', {
-      url: '/chats',
+  .state('tab.colleagues', {
+      url: '/colleagues',
       views: {
-        'tab-chats': {
-          templateUrl: 'templates/tab-chats.html',
-          controller: 'ChatsCtrl'
+        'tab-colleagues': {
+          templateUrl: 'templates/tab-colleagues.html',
+          controller: 'ColleaguesCtrl'
         }
       }
     })
-    .state('tab.chat-detail', {
-      url: '/chats/:chatId',
-      views: {
-        'tab-chats': {
-          templateUrl: 'templates/chat-detail.html',
-          controller: 'ChatDetailCtrl'
-        }
-      }
-    })
+    // .state('tab.chat-detail', {
+    //   url: '/chats/:chatId',
+    //   views: {
+    //     'tab-chats': {
+    //       templateUrl: 'templates/chat-detail.html',
+    //       controller: 'ChatDetailCtrl'
+    //     }
+    //   }
+    // })
 
   .state('tab.account', {
     url: '/account',
