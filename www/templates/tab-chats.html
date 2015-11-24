@@ -1,11 +1,11 @@
 <ion-view hide-nav-bar="true">
   <ion-content>
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="chat in chats" type="">
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="result in testResults" type="">
         <!-- href="#/tab/chats/{{chat.id}}" -->
         <!-- <img ng-src="{{chat.face}}"> -->
-        <h2>{{chat.name}}</h2>
-        <p>{{chat.lastText}}</p>
+        <h2>{{result | json}} {{result}}</h2>
+        <!-- <p>{{chat.lastText}}</p> -->
         <i class="icon ion-chevron-left icon-accessory"></i>
 
         <ion-option-button class="button-assertive" ng-click="remove(chat)">

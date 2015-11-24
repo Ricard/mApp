@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('mApp', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('mApp', ['ionic', 'backand', 'starter.controllers'])
 
 .run(function($ionicPlatform) {
   // $ionicPlatform.ready(function() {
@@ -23,12 +23,12 @@ angular.module('mApp', ['ionic', 'starter.controllers', 'starter.services'])
   // });
 })
 
-.config(function($stateProvider, $urlRouterProvider) {
+.config(function($stateProvider, $urlRouterProvider, BackandProvider) {
 
-  // Ionic uses AngularUI Router which uses the concept of states
-  // Learn more here: https://github.com/angular-ui/ui-router
-  // Set up the various states which the app can be in.
-  // Each state's controller can be found in controllers.js
+  BackandProvider.setAppName('mapp');
+  BackandProvider.setSignUpToken('90bd3bc8-d123-4d06-9c57-38e0f24414f0');
+  BackandProvider.setAnonymousToken('20bbd01c-0dff-43db-bcf1-a0d7e88f3692');
+
   $stateProvider
 
   // setup an abstract state for the tabs directive
