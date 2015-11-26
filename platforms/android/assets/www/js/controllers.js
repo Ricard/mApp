@@ -1,20 +1,26 @@
-angular.module('starter.controllers', [])
+angular.module('mAppControllers', [])
 
 .controller('DashCtrl', function($scope) {})
 
-.controller('ChatsCtrl', function($scope, Chats) {
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
+.controller('ColleaguesCtrl', function($scope, Backand, $http/*, mAppBackend*/) {
 
-  $scope.chats = Chats.all();
-  $scope.remove = function(chat) {
-    Chats.remove(chat);
-  };
+  // the controller page is active: we must check updated data?
+  //$scope.$on('$ionicView.enter', function(e) {});
+
+  $http({
+    method: 'GET',
+    url: Backand.getApiUrl() + '/1/objects/colleagues',
+    params: {
+      pageSize: 20,
+      pageNumber: 1
+    }
+  }).success(function(response,status){
+    console.log("response id: " + response.data[1].id + " response status: " + status);
+    console.log(response.data);
+    $scope.colleagues = response.data;
+  });
+  console.log($scope.testResults);
+
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {

@@ -24,6 +24,8 @@
   fill:#AAAAAA
 }*/
 
+/* ////////////// M A P  C S S /////////// */
+
 #map-figure rect
 {
   /*fill:#333333*/
@@ -49,3 +51,23 @@
     background: url(polina.jpg) no-repeat;
     background-size: cover;
 }*/
+
+/* ////////////// L I S T  C S S /////////// */
+
+.button.button-icon.input-button {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  color: #bbb;
+}
+
+.bar {
+  /*border-top-width: 1px;
+  border-top-style: initial !important;*/
+  border: 1px !important;
+}
+
+/*search input*/
+.full-width {
+  width: 100%;
+}
