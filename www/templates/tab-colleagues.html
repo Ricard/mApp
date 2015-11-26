@@ -3,12 +3,12 @@
   <!-- ////////// FOOTER BUTTONS ////////////////
   FOR SWITCHING COLLEAGUES (ASSIGNED/UNASSIGNED) -->
 
-  <ion-footer-bar class="bar-light">
+  <ion-footer-bar class="bar-stable">
     <div class="button-bar">
-      <button class="button button-light button-android" ng-class="{ 'button-positive': showAssigned == 'false' }" ng-click="switchAssigned('false')">
+      <button class="button" ng-class="{'active': showAssigned == false}" ng-click="switchAssigned(false)">
         Assigned
       </button>
-      <button class="button button-light button-android" ng-class="{ 'button-positive': showAssigned == 'true' }" ng-click="switchAssigned('true')">
+      <button class="button" ng-class="{'active': showAssigned == true}" ng-click="switchAssigned(true)">
         Unassigned
       </button>
     </div>
@@ -16,7 +16,7 @@
 
   <!-- ////////// SEARCH BAR //////////////// -->
 
-  <ion-header-bar class="bar-light bar-subheader">
+  <ion-header-bar class="bar-subheader custom bar-stable">
     <input type="search"
            placeholder="Filter colleagues..."
            ng-model="search"
@@ -32,17 +32,16 @@
 
   <!-- /////////// COLLEAGUES LIST //////////////// -->
 
-  <ion-content class="padding has-subheader">
+  <ion-content class="padding has-subheader custom">
     <ion-list>
-      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="colleague in colleagues" type="">
+      <ion-item class="item-icon-right" ng-repeat="colleague in getColleagues() | filter:search">
         <!-- href="#/tab/chats/{{chat.id}}" -->
-        <!-- <img ng-src="{{chat.face}}"> -->
         <h2>{{colleague.colleague_name}}</h2>
         <!-- <p>{{colleague.id}}</p> -->
         <i class="icon ion-chevron-left icon-accessory"></i>
 
-        <ion-option-button class="button-assertive" ng-click="remove(chat)">
-          Delete
+        <ion-option-button class="button-positive" ng-click="remove(colleague)">
+          Todo
         </ion-option-button>
       </ion-item>
     </ion-list>

@@ -61,13 +61,22 @@
   color: #bbb;
 }
 
-.bar {
-  /*border-top-width: 1px;
-  border-top-style: initial !important;*/
-  border: 1px !important;
-}
-
 /*search input*/
 .full-width {
   width: 100%;
+  background-color: #f8f8f8;
+  margin-left: 20px;
 }
+
+/*.bar-light.custom
+{
+  background-color: #eee;
+}*/
+
+.has-subheader.custom {
+    top: 88px !important;
+}
+
+/*.has-tabs-top {
+    top: 45px !important;
+}*/
