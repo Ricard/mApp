@@ -1,4 +1,4 @@
-angular.module('mApp', ['ionic', 'backand', 'mAppControllers'])
+angular.module('mApp', ['ionic', 'backand', 'mAppControllers', 'mAppServices'])
 
 .run(function($ionicPlatform) {
   // $ionicPlatform.ready(function() {
@@ -70,8 +70,8 @@ angular.module('mApp', ['ionic', 'backand', 'mAppControllers'])
     url: '/account',
     views: {
       'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
+        templateUrl: 'templates/tab-account.html'
+        // ,controller: 'AccountCtrl'
       }
     }
   });

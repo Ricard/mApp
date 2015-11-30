@@ -2,41 +2,37 @@ angular.module('mAppControllers', [])
 
 .controller('DashCtrl', function($scope) {})
 
-.controller('ColleaguesCtrl', function($scope, Backand, $http, $ionicScrollDelegate/*, mAppBackend*/) {
+.controller('ColleaguesCtrl', function($scope, $ionicScrollDelegate, Colleagues) {
 
   // the controller page is active: we must check updated data?
   //$scope.$on('$ionicView.enter', function(e) {});
 
-  /////////// COLLEAGUES DATA ////////////
-  var colleagues = [];
+  // handle colleagues service
+  $scope.getColleagues = function() {
 
-  $http({
-    method: 'GET',
-    url: Backand.getApiUrl() + '/1/query/data/UnassignedColleagues'
-  }).success(function(response,status){ colleagues = response; });
+    $scope.assignedCount = Colleagues.getAssignedCount();
+    $scope.unassignedCount = Colleagues.getUnassignedCount();
+    return ($scope.showAssigned) ? Colleagues.getAssigned() : Colleagues.getUnassigned();
+  };
 
-  $scope.getColleagues = function() { return colleagues; };
-
-  ///////////// VIEW UTILS ////////////
+  // define if list show assigned/unassigned colleagues
   $scope.showAssigned = true;
-  $scope.switchAssigned = function(showAssigned) { $scope.showAssigned = showAssigned; }
+  $scope.switchAssigned = function(option) { $scope.showAssigned = option; }
 
+  // search box content
+  $scope.search = '';
   $scope.clearSearch = function() { $scope.search = ''; };
 
-  $scope.scrollTop = function() {
-    $ionicScrollDelegate.scrollTop();
-  };
+  // go to top of list
+  $scope.scrollTop = function() { $ionicScrollDelegate.scrollTop(); };
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
-})
+// .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
+//   $scope.chat = Chats.get($stateParams.chatId);
+// })
 
-.controller('AccountCtrl', function($scope) {
-  $scope.settings = {
-    enableFriends: true
-  };
-})
+// .controller('AccountCtrl', function($scope) {
+// })
 
 .controller('MapCtrl', function($scope, $state, $window) {
   $scope.seats4 = [0,1,2,3];

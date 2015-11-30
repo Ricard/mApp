@@ -5,11 +5,17 @@
 
   <ion-footer-bar class="bar-stable">
     <div class="button-bar">
-      <button class="button" ng-class="{'active': showAssigned == false}" ng-click="switchAssigned(false)">
-        Assigned
-      </button>
       <button class="button" ng-class="{'active': showAssigned == true}" ng-click="switchAssigned(true)">
+        Assigned
+        <span class="badge" ng-class="{
+          'badge-dark': showAssigned == false,
+          'badge-positive': showAssigned == true }">{{assignedCount}}</span>
+      </button>
+      <button class="button" ng-class="{'active': showAssigned == false}" ng-click="switchAssigned(false)">
         Unassigned
+        <span class="badge" ng-class="{
+          'badge-dark': showAssigned == true,
+          'badge-positive': showAssigned == false }">{{unassignedCount}}</span>
       </button>
     </div>
   </ion-footer-bar>
@@ -24,9 +30,12 @@
            ng-blur="searchFocused = false"
            ng-change="scrollTop()"
            class="full-width">
-    <button ng-if="search.length"
-            class="button button-icon ion-android-close input-button"
+    <button class="button button-icon input-button"
+            ng-class="{
+              'ion-android-search' : search == '',
+              'ion-android-close' : search != ''}"
             ng-click="clearSearch()">
+            <!-- search.length -->
     </button>
   </ion-header-bar>
 
@@ -38,11 +47,11 @@
         <!-- href="#/tab/chats/{{chat.id}}" -->
         <h2>{{colleague.colleague_name}}</h2>
         <!-- <p>{{colleague.id}}</p> -->
-        <i class="icon ion-chevron-left icon-accessory"></i>
+        <i class="icon ion-chevron-right icon-accessory"></i>
 
-        <ion-option-button class="button-positive" ng-click="remove(colleague)">
+        <!-- <ion-option-button class="button-positive" ng-click="remove(colleague)">
           Todo
-        </ion-option-button>
+        </ion-option-button> -->
       </ion-item>
     </ion-list>
   </ion-content>
