@@ -41,9 +41,10 @@
 
   <!-- /////////// COLLEAGUES LIST //////////////// -->
 
-  <ion-content class="padding has-subheader custom">
+  <ion-content class="has-subheader custom">
     <ion-list>
-      <ion-item class="item-icon-right" ng-repeat="colleague in getColleagues() | filter:search">
+      <!-- <a class="button icon icon-right ion-chevron-right" ui-sref="home.facts">Scientific Facts</a> -->
+      <ion-item class="item-icon-right" ng-repeat="colleague in getColleagues() | filter:search" ui-sref="tab.detail">
         <!-- href="#/tab/chats/{{chat.id}}" -->
         <h2>{{colleague.colleague_name}}</h2>
         <!-- <p>{{colleague.id}}</p> -->
@@ -54,5 +55,6 @@
         </ion-option-button> -->
       </ion-item>
     </ion-list>
+    <!-- <a class="button icon icon-right ion-chevron-right" ui-sref="tab.detail">click</a> -->
   </ion-content>
 </ion-view>

@@ -56,15 +56,14 @@ angular.module('mApp', ['ionic', 'backand', 'mAppControllers', 'mAppServices'])
         }
       }
     })
-    // .state('tab.chat-detail', {
-    //   url: '/chats/:chatId',
-    //   views: {
-    //     'tab-chats': {
-    //       templateUrl: 'templates/chat-detail.html',
-    //       controller: 'ChatDetailCtrl'
-    //     }
-    //   }
-    // })
+    .state('tab.detail', {
+      url: '/detail', // /:detailId
+      views: {
+        'tab-colleagues': {
+          templateUrl: 'templates/tab-detail.html',
+        }
+      }
+    })
 
   .state('tab.account', {
     url: '/account',

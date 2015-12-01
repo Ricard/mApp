@@ -7,8 +7,8 @@
       <svg viewBox="0 0 772 1393">
         <image width="772" height="1393" xlink:href="img/planosimplificat.jpg"></image>
         <g>
-          <rect ng-repeat="i in seats4" id="rect{{i}}" ng-attr-x="{{7 + (84 * i)}}" y="252" ng-click="anar('chats')"></rect>
-          <rect ng-repeat="i in seats4" id="rect{{i}}" ng-attr-x="{{7 + (84 * i)}}" y="354" ng-click="anar('tab/chats')"></rect>
+          <rect ng-repeat="i in seats4" id="rect{{i}}" ng-attr-x="{{7 + (84 * i)}}" y="252" ui-sref="tab.detail"></rect>
+          <rect ng-repeat="i in seats4" id="rect{{i}}" ng-attr-x="{{7 + (84 * i)}}" y="354" ui-sref="tab.detail"></rect>
         </g>
       </svg>
     </figure>
