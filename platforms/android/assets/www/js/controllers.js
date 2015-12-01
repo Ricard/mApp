@@ -2,7 +2,7 @@ angular.module('mAppControllers', [])
 
 .controller('DashCtrl', function($scope) {})
 
-.controller('ColleaguesCtrl', function($scope, $ionicScrollDelegate, Colleagues) {
+.controller('ColleaguesCtrl', function($scope, $ionicScrollDelegate, Colleagues, $window) {
 
   // the controller page is active: we must check updated data?
   //$scope.$on('$ionicView.enter', function(e) {});
